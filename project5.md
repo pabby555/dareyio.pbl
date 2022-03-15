@@ -1,4 +1,4 @@
-# Project 2
+# Project 5
 ## Title: CLIENT/SERVER ARCHITECTURE USING MYSQL RDMS
 ### Description: 
 This Project demonstrates how to implement a basic client-server architecture with MySQL database management system. 
