@@ -34,12 +34,12 @@ Upgrading package repository
 ```bash
 $ sudo apt install mysql-server
 ```
-Installing mysql-server package
-![package upgrade](./images5/mysql-server-install-1.png)
 
-![package upgrade](./images5/mysql-server-install-2.png)
+![mysql server install](./images5/mysql-server-install.png)
 
-![package upgrade](./images5/mysql-server-install-3.png)
+![mysql server install](./images5/mysql-server-install-2.png)
+
+![mysql server install](./images5/mysql-server-install-3.png)
 
 <!-- Code Blocks -->
 ```bash
