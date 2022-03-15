@@ -105,8 +105,12 @@ Configuring mysql server to allow connections from remote hosts
 ![Editing mysql config file](./images5/editing-mysql-config-file-1.png)
 
 Connecting to mysql server from mysql client
+
+<!-- Code Blocks -->
+```bash
 $sudo mysql -u root 
 $mysql -u root -h 172.31.29.207 -p
+```
 
 root user is not allowed to connect. creating user in mysql server for this connection
 
@@ -123,6 +127,9 @@ $sudo mysql -u root
 
 ![Reconnecting to mysql server](./images5/connecting-to-mysqlserver-2.png)
 
+<!-- Code Blocks -->
+```bash
 $mysql -u root -h 172.31.29.207 -p
+```
 
 ![Verifying Client-server connection](./images5/verifying-login-mysqlserver.png)
