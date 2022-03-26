@@ -543,14 +543,10 @@ mysql> exit
 
 * STEP 6 - Configure WordPress to connect to remote database.
 
-      Open MySQL port 3306 on DB Server EC2.
-
-      Allow access to the DB server from only the Web Server`s IP address for extra security. 
-
-      Inbound Rule configuration should specify /32.
-
+Open MySQL port 3306 on DB Server EC2. Allow access to the DB server from only the Web Server`s IP address for extra security. Inbound Rule configuration should specify /32.
 
 ![Wordpress config](./images6/db-security-rules.png)
+
 
 * Install mysql client on Web Server and test that you can connect from the web server to the DB Server.
 
