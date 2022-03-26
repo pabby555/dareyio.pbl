@@ -549,6 +549,7 @@ mysql> exit
 
       Inbound Rule configuration should specify /32.
 
+
 ![Wordpress config](./images6/db-security-rules.png)
 
 * Install mysql client on Web Server and test that you can connect from the web server to the DB Server.
