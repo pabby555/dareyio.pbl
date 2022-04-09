@@ -535,34 +535,13 @@ $  sudo mysql -h 172.31.93.78 -u webaccess -p
 mysql>  source /home/ec2-user/tooling-master/tooling-db.sql
 
 ```
-![mysql-1](./images7/web-php-edit.png)
-
-![mysql-1](./images7/mysql-user-1.png)
-
-![mysql script edit](./images7/mysql-script-edit.png)
+![update tooling-db script](./images7/tooling-script-edit.png)
 
 ![mysql access](./images7/mysql-access-3.png)
 
 ![mysql user creation](./images7/mysql-user-created.png)
 
-
-![user verification](./images7/mysql-user-verify.png)
-
-* Update the admin user 'myuser' created in table 'users' in 'tooling' database to reflect new password (must be four characters) use the script 
-<!-- Code Blocks -->
-```bash
-$ sudo mysql -u root -p
-> use tooling;
-> UPDATE users
--> SET password = 'pass'
--> WHERE username = 'myuser';
-> SELECT * FROM users;
-```
-![user edit](./images7/db-myuser-change.png)
-
-![user edit](./images7/db-myuser-change-2.png)
-
-* Edit functions.php file in /var/www/html directory in Web Server to reflect new password "pass". [PHP website says password must be four characters]
+* Edit functions.php file in /var/www/html directory in Web Server to reflect user details and database info
 
 ![user edit](./images7/functions-php-edit.png)
 
