@@ -41,7 +41,7 @@ One Ubuntu Apache Load Balancer Server (20.04) will be configured.
   * Client browser can access both Web Servers by their respective Public IP Addresses or Public DNS names and can open the Tooling Website e.g http://<Public-IP-Address or Public-DNS-Name>/index.php)
 
   Web Server1
-  ![httpd service](./image8/web-page-1.png)
+  ![httpd service](./image8/Web-page-1.png)
 
   Web Server2
    ![httpd service](./image8/web-page-2.png)
