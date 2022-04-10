@@ -22,7 +22,7 @@ One Ubuntu Apache Load Balancer Server (20.04) will be configured.
   * Apache (httpd) process is up and running on both Web Server 1 and Web Server 2.
 
   Web Server1
-  ![httpd service](./image8/httpd-service.png)
+  ![httpd-service](https://i.imgur.com/ta0knyW.png)
 
   Web Server2
   ![update tooling-db script](./image8/httpd-service.png)
@@ -47,7 +47,7 @@ One Ubuntu Apache Load Balancer Server (20.04) will be configured.
    ![httpd service](./image8/web-page-2.png)
 
 
-* Open TCP port 80 by creating an Inbound Rule in Security Group
+* Open TCP port 80 by creating an Inbound Rule in Security Group on AWS
 
 ![security group](./image8/security-group.png)
 
@@ -124,13 +124,8 @@ $ sudo systemctl restart apache2
 
 ![update](./image8/webpage-proxy-1.png)
 
-* unmounted /var/log/httpd/ from your Web Servers to the NFS server and make sure that each Web Server has its own log directory.
-<!-- Code Blocks -->
-```bash
-$ sudo vi /etc/fstab
+* Refresh your browser page http://<Load-Balancer-Public-IP-Address-or-Public-DNS-Name>/index.php several times and make sure that both servers receive HTTP GET requests from your LB – new records must appear in each server’s log file. The number of requests to each server will be approximately the same since we set loadfactor to the same value for both servers
 
-$ sudo umount /var/www
-```
 ![update](./image8/get-http-1.png)
 
 ![update](./image8/get-http-2.png)
