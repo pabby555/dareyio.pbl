@@ -92,13 +92,16 @@ $ sudo mv /var/lib/jenkins/workspace/ansible/playbooks/common.yml /var/lib/jenki
 ![jenkins-playbook-4](https://i.imgur.com/jz8eIUf.png)
 
 * Inside site.yml file, import common.yml playbook.
-
+<!-- Code Blocks -->
+```bash
 ---
 - hosts: all
 - import_playbook: ../static-assignments/common.yml
+```
 
 * Run ansible-playbook command against the dev environment. Create another playbook under static-assignments and name it common-del.yml. In this playbook, configure deletion of wireshark utility.
-
+<!-- Code Blocks -->
+```bash
 ---
 - name: update web and nfs servers
   hosts: webservers, nfs
@@ -141,14 +144,17 @@ $ sudo mv /var/lib/jenkins/workspace/ansible/playbooks/common.yml /var/lib/jenki
         autoclean: yes
 
 ...
+```
 
 ![jenkins-playbook-7](https://i.imgur.com/BKum5Ta.png)
 
 * update site.yml with - import_playbook: ../static-assignments/common-del.yml instead of common.yml and run it against dev servers:
-
+<!-- Code Blocks -->
+```bash
 ---
 - hosts: all
 - import_playbook: ../static-assignments/common-del.yml
+```
 
 <!-- Code Blocks -->
 ```bash
@@ -220,6 +226,8 @@ Go into tasks directory, and within the main.yml file, start writing configurati
 
 main.yml file:
 
+<!-- Code Blocks -->
+```bash
 ---
 - name: install apache
   become: true
@@ -255,15 +263,20 @@ main.yml file:
   ansible.builtin.file:
     path: /var/www/html/html
     state: absent
+```
 
 * Step 4: Reference ‘Webserver’ role
 
 * Within the static-assignments folder, create a new assignment for uat-webservers "uat-webservers.yml". This is where you will reference the role.
 
+
+<!-- Code Blocks -->
+```bash
 ---
 - hosts: uat-webservers
   roles:
      - webserver
+```
 
 ![roles-ref](https://i.imgur.com/pyVN4xK.png)
 
@@ -303,9 +316,9 @@ $ sudo ansible-playbook -i /var/lib/jenkins/workspace/ansible/inventory/uat.yml 
 
 * Try to reach UAT Web servers on web browser with public IP Addresses or public DNS names.
 
-http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+http://Web1-UAT-Server-Public-IP-or-Public-DNS-Name/index.php
 
-http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+http://Web1-UAT-Server-Public-IP-or-Public-DNS-Name/index.php
 
 ![web-browser](https://i.imgur.com/3I9GghT.png)
 
